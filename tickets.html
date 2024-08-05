@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>Tickets</header>
+
+  <p>Welcome to the Ticket table page. Here you can insert, edit, and delete data into the Ticket table.</p>
+  
+  <button onclick="showModal()">New</button>
+  
+  <table id='ticketTable'>
+    <thead>
+      <tr>
+        <th>TicketID</th>
+        <th>SeatNum</th>
+        <th>ScreeningID</th>
+        <th>CustomerID</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <div id="Overlay"></div>
+  <div id="modal" class="modal">
+    <h2>Add New Ticket</h2>
+    <form id="TicketForm">
+      <label for="TicketID">TicketID:</label>
+      <input type="text" id="TicketID" name="TicketID" required><br>
+      <label for="SeatNum">SeatNum:</label>
+      <input type="text" id="SeatNum" name="SeatNum" required><br>
+      <label for="ScreeningID">ScreeningID:</label>
+      <input type="text" id="ScreeningID" name="ScreeningID" required><br>
+      <label for="CustomerID">CustomerID:</label>
+      <input type="text" id="CustomerID" name="CustomerID" required><br>
+      <button type="button" onclick="AddTicket()">Add Ticket</button>
+      <button type="button" onclick="closeModal()">Cancel</button>
+    </form>
+  </div>
+
+  <div id="editTicket" class="modal">
+    <h2>Edit Ticket</h2>
+    <form id="editTicketForm">
+      <label for="editTicketID">TicketID:</label>
+      <input type="text" id="editTicketID" name="TicketID" required><br>
+      <label for="editSeatNum">SeatNum:</label>
+      <input type="text" id="editSeatNum" name="SeatNum" required><br>
+      <label for="editScreeningID">ScreeningID:</label>
+      <input type="text" id="editScreeningID" name="ScreeningID" required><br>
+      <label for="editCustomerID">CustomerID:</label>
+      <input type="text" id="editCustomerID" name="CustomerID" required><br>
+      <button type="button" onclick="updateItem('Ticket')">Update Ticket</button>
+      <button type="button" onclick="closeEditModal('Ticket')">Cancel</button>
+    </form>
+  </div>
+  <div id="Overlay"></div>
+
+  <button onclick="window.location.href='myindex.html'">Back to home</button>
+
+  <footer><em>2024 Adison Daggett Melody Acevedo </em></footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

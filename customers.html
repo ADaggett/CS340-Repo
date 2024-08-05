@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>Customers</header>
+
+  <p>Welcome to the Customer table page. Here you can insert, edit, and delete data into the Customer table.</p>
+  
+  <button onclick="showModal()">New</button>
+  
+  <table id="customerTable">
+    <thead>
+      <tr>
+        <th>CustomerID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <div id="Overlay"></div>
+  <div id="modal" class="modal">
+    <h2>Add New Customer</h2>
+    <form id="customerForm">
+      <label for="CustomerID">CustomerID:</label>
+      <input type="text" id="CustomerID" name="CustomerID" required><br>
+      <label for="FirstName">FirstName:</label>
+      <input type="text" id="FirstName" name="FirstName" required><br>
+      <label for="LastName">LastName:</label>
+      <input type="text" id="LastName" name="LastName" required><br>
+      <label for="Email">Email:</label>
+      <input type="text" id="Email" name="Email" required><br>
+      <button type="button" onclick="AddCustomer()">Add Customer</button>
+      <button type="button" onclick="closeModal()">Cancel</button>
+    </form>
+  </div>
+
+   <div id="editCustomer" class='modal'>
+    <h2>Edit Customer</h2>
+    <form id="editCustomerForm">
+      <label for="editCustomerID">CustomerID:</label>
+      <input type="text" id="editCustomerID" name="CustomerID" required><br>
+      <label for="editFirstName">FirstName:</label>
+      <input type="text" id="editFirstName" name="FirstName" required><br>
+      <label for="editLastname">Lastname:</label>
+      <input type="text" id="editLastname" name="LastName" required><br>
+      <label for="editEmail">Email:</label>
+      <input type="text" id="editEmail" name="Email" required><br>
+      <button type="button" onclick="updateItem('Customer')">Update Customers</button>
+      <button type="button" onclick="closeEditModal('Customer')">Cancel</button>
+    </form>
+  </div>
+  <div id="Overlay"></div>
+
+  <button onclick="window.location.href='index.html'">Back to home</button>
+
+  <footer><em>2024 Adison Daggett Melody Acevedo</em></footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

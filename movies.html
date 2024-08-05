@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>Movies</header>
+</p>
+
+  <p>Welcome to the Movie table page. Here you can insert, edit, and delete data into the movie table.</p>
+  
+  <button onclick="showModal()">New</button>
+
+  <table id='movieTable'>
+    <thead>
+      <tr>
+        <th>MovieID</th>
+        <th>Title</th>
+        <th>Duration</th>
+        <th>Genre</th>
+        <th>Release Date</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <div id="Overlay"></div>
+  <div id="modal" class="modal">
+    <h2>Add New Movie</h2>
+    <form id="movieForm">
+      <label for="movieID">MovieID:</label>
+      <input type="text" id="movieID" name="movieID" required><br>
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required><br>
+      <label for="duration">Duration:</label>
+      <input type="text" id="duration" name="duration" required><br>
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre" name="genre" required><br>
+      <label for="releaseDate">Release Date:</label>
+      <input type="date" id="releaseDate" name="releaseDate" required><br>
+      <label for="rating">Rating:</label>
+      <input type="text" id="rating" name="rating" required><br>
+      <button type="button" onclick="AddMovie()">Add Movie</button>
+      <button type="button" onclick="closeModal()">Cancel</button>
+    </form>
+  </div>
+
+  <div id="editMovie" class='modal'>
+    <h2>Edit Movie</h2>
+    <form id="editMovieForm">
+      <label for="editMovieID">MovieID:</label>
+      <input type="text" id="editMovieID" name="movieID" required><br>
+      <label for="editTitle">Title:</label>
+      <input type="text" id="editTitle" name="title" required><br>
+      <label for="editDuration">Duration:</label>
+      <input type="text" id="editDuration" name="duration" required><br>
+      <label for="editGenre">Genre:</label>
+      <input type="text" id="editGenre" name="genre" required><br>
+      <label for="editReleaseDate">Release Date:</label>
+      <input type="date" id="editReleaseDate" name="releaseDate" required><br>
+      <label for="editRating">Rating:</label>
+      <input type="text" id="editRating" name="rating" required><br>
+      <button type="button" onclick="updateItem('Movie')">Update Movie</button>
+      <button type="button" onclick="closeEditModal('Movie')">Cancel</button>
+    </form>
+  </div>
+  <div id="Overlay"></div>
+
+  <button onclick="window.location.href='myindex.html'">Back to home</button>
+
+  <footer><em>2024 Adison Daggett Melody Acevedo </em></footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
